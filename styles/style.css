@@ -1,5 +1,4 @@
 * {
-       background-color: #f0c8ac;
        box-sizing: border-box;
        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
        color: black;
@@ -35,7 +34,7 @@ h5 {
 /*header {
        position: sticky;
        top: 0;
-       background-color: aliceblue;
+       border-bottom: solid 1px;
 }*/
 
 nav {
@@ -63,12 +62,49 @@ header nav ul li {
 }
 
 .nav-list:hover {
-       background-color: white;
        scale: 1.5;
 }
 
 /*MAIN*/
 
+/*HOME*/
+.imagen-index {
+       display: flex;
+       flex-direction: row;
+       align-content: center;
+       justify-content: space-around;
+}
+
+/*CAPITULO*/
+
+.select-capitulo {
+       font-size: medium;
+}
+
+.select-capitulo {
+       background-color: white;
+}
+
+option {
+       color: black;
+}
+
+select:hover {
+       color: blue;
+}
+
+option:checked {
+       background-color: black;
+       color: white;
+}
+
+.listado-capitulos{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+}
+
+/*COMPRAR*/
 
 main {
        padding-left: 100px;
@@ -91,33 +127,57 @@ main {
        justify-content: center;
 }
 
-/*CAPITULO*/
-
-.select-capitulo {
-       font-size: medium;
+.libros {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-template-rows: repeat(3, 1fr);
+       justify-items: stretch;
+       justify-content: space-evenly;
 }
 
-.select-capitulo {
-       background-color: white;
+.card {
+       margin: 5px;
+       padding: 5px;
 }
 
-option{
-       color: black;
+.card:hover{
+       scale:0.9;
 }
 
-select:hover {
-       color: blue;
+/*HISTORIA*/
+
+.historia-historia {
+       display: grid;
+       grid-template-areas:
+              "p img";
+       margin: 10px;
 }
 
-option:checked {
-       background-color: black;
-       color: white;
+.texto-historia{
+       grid-area: p;
 }
 
+.imagen-historia {
+       grid-area: img;
+}
+
+.filosofia-historia {
+       display: grid;
+       grid-template-areas:
+              "img p";
+       margin: 10px;
+       padding: 15px;
+}
+
+.texto-filosofia-historia{
+       grid-area: p;
+}
+
+.imagen-filosofia-historia {
+       grid-area: img;
+}
 
 /*CONTACTO*/
-
-
 
 
 /*CONTACTO GRID*/
@@ -206,19 +266,17 @@ footer {
 /*RESPONSIVE*/
 /*tablet*/
 
-@media (min-width: 431px) and (max-width: 800px) {
-
-}
+@media (min-width: 431px) and (max-width: 800px) {}
 
 /*mobile*/
 @media (min-width: 320px) and (max-width: 430px) {
-       
+
        /*HEADER*/
        header {
               display: grid;
               grid-template-areas:
-              "logo logo"
-              "nav nav";
+                     "logo logo"
+                     "nav nav";
               justify-content: center;
               align-content: center;
        }
@@ -236,27 +294,27 @@ footer {
               gap: 10px;
               font-size: small;
               padding: 5px;
-}
+       }
 
        /*MAIN CONTACTO*/
        .main-contacto {
               display: grid;
-              grid-template-areas: 
-              "h2-contacto h2-contacto"
-              "texto-contacto texto-contacto"
-              "h3-contacto h3-contacto"
-              "form laterla-contacto"
-              "cta-contacto ."
+              grid-template-areas:
+                     "h2-contacto h2-contacto"
+                     "texto-contacto texto-contacto"
+                     "h3-contacto h3-contacto"
+                     "form laterla-contacto"
+                     "cta-contacto ."
               ;
        }
 
        /*FOOTER*/
-       footer{
+       footer {
               display: grid;
-              grid-template-areas: 
-              "logo logo"
-              "indice indice"
-              "social social"
+              grid-template-areas:
+                     "logo logo"
+                     "indice indice"
+                     "social social"
               ;
               justify-items: center;
               align-items: center;
@@ -264,13 +322,13 @@ footer {
 
        .footer-logo {
               grid-area: logo;
-}
+       }
 
        .footer-indice {
               grid-area: indice
-}
+       }
 
        .footer-social {
               grid-area: social;
-}
+       }
 }
