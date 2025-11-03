@@ -37,32 +37,27 @@ h5 {
        border-bottom: solid 1px;
 }*/
 
-nav {
+.container-fluid {
        display: flex;
-       justify-content: space-around;
        flex-direction: column;
+       justify-content: space-around;
        align-items: center;
 }
 
-header nav ul {
+.navbar-nav {
        display: flex;
        list-style: none;
        gap: 30px;
        padding: 5px;
 }
 
-header nav ul li {
-       border: 2px solid black;
-       padding: 5px;
-       border-radius: 10%;
-}
 
 .nav-link:hover {
-       background-color: white;
+       background-color: rgb(255, 255, 255);
 }
 
-.nav-list:hover {
-       scale: 1.5;
+.nav-item:hover {
+       scale: 1.2;
 }
 
 /*MAIN*/
@@ -76,6 +71,7 @@ header nav ul li {
 }
 
 /*CAPITULO*/
+
 
 .select-capitulo {
        font-size: medium;
@@ -179,6 +175,9 @@ main {
 
 /*CONTACTO*/
 
+.mb-3{
+       margin: 20px;
+}
 
 /*CONTACTO GRID*/
 .main-contacto {
@@ -215,8 +214,8 @@ form {
        grid-row: 4 / 6;
        align-items: center;
        align-content: stretch;
-       margin: 15px;
-       background-color: coral;
+       padding: 35px;
+       background-color: rgba(128, 128, 128, 0.226);
        border: 2px solid black;
        border-radius: 15px;
 }
