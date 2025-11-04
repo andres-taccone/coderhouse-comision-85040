@@ -30,13 +30,6 @@ h5 {
 
 /*HEADER*/
 
-
-/*header {
-       position: sticky;
-       top: 0;
-       border-bottom: solid 1px;
-}*/
-
 .container-fluid {
        display: flex;
        flex-direction: column;
@@ -51,7 +44,6 @@ h5 {
        padding: 5px;
 }
 
-
 .nav-link:hover {
        background-color: rgb(255, 255, 255);
 }
@@ -59,6 +51,7 @@ h5 {
 .nav-item:hover {
        scale: 1.2;
 }
+
 
 /*MAIN*/
 
@@ -70,8 +63,8 @@ h5 {
        justify-content: space-around;
 }
 
-/*CAPITULO*/
 
+/*CAPITULO*/
 
 .select-capitulo {
        font-size: medium;
@@ -94,11 +87,19 @@ option:checked {
        color: white;
 }
 
-.listado-capitulos{
+.listado-capitulos {
        display: flex;
        flex-direction: column;
        align-items: center;
 }
+
+.imagen-capitulos {
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       border-radius: 8px;
+}
+
 
 /*COMPRAR*/
 
@@ -136,9 +137,10 @@ main {
        padding: 5px;
 }
 
-.card:hover{
-       scale:0.9;
+.card:hover {
+       scale: 0.9;
 }
+
 
 /*HISTORIA*/
 
@@ -149,7 +151,7 @@ main {
        margin: 10px;
 }
 
-.texto-historia{
+.texto-historia {
        grid-area: p;
 }
 
@@ -165,7 +167,7 @@ main {
        padding: 15px;
 }
 
-.texto-filosofia-historia{
+.texto-filosofia-historia {
        grid-area: p;
 }
 
@@ -173,13 +175,15 @@ main {
        grid-area: img;
 }
 
+
 /*CONTACTO*/
 
-.mb-3{
+.mb-3 {
        margin: 20px;
 }
 
-/*CONTACTO GRID*/
+
+/*contacto grid*/
 .main-contacto {
        display: grid;
        grid-template-columns: repeat(2, 1fr);
@@ -226,10 +230,7 @@ form {
 }
 
 
-
 /*FOOTER*/
-
-
 
 footer {
        margin-top: 5%;
@@ -295,27 +296,77 @@ footer {
               padding: 5px;
        }
 
-       /*MAIN CONTACTO*/
+       /*MAIN*/
+       main{
+              padding: 0px 50px;
+       }
+
+       /*INDEX*/
+
+       .imagen-index {
+              display: flex;
+              flex-direction: column;
+              align-content: center;
+              gap: 5px;
+              justify-content: space-around;
+       }
+
+       /*COMPRAR*/
+       .libros {
+              display: flex;
+              flex-flow: column wrap;
+       }
+
+       /*HISTORIA*/
+       .filosofia-historia{
+              display: flex;
+              flex-flow: column wrap;
+       }
+
+       .historia-historia{
+              display: flex;
+              flex-flow: column wrap;
+       }
+
+       /*CONTACTO*/
+
        .main-contacto {
               display: grid;
               grid-template-areas:
                      "h2-contacto h2-contacto"
                      "texto-contacto texto-contacto"
                      "h3-contacto h3-contacto"
-                     "form laterla-contacto"
+                     "form form"
+                     "lateral-contacto lateral-contacto"
                      "cta-contacto ."
               ;
+              grid-template-columns: auto auto;
+              grid-template-rows: auto auto auto auto auto auto;
+              row-gap: 10px;
+       }
+
+       form{
+              grid-area: form;
+       }
+
+       .lateral-contacto{
+              grid-area: lateral-contacto;
        }
 
        /*FOOTER*/
+       footer{
+              height: auto;
+              width: 90vw;
+       }
+
        footer {
-              display: grid;
+              display: inline-grid;
               grid-template-areas:
                      "logo logo"
                      "indice indice"
                      "social social"
               ;
-              justify-items: center;
+              justify-content: center;
               align-items: center;
        }
 
