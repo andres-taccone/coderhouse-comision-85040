@@ -1,0 +1,12 @@
+@use "variables" as v;
+
+
+.card{
+    @extend %producto-libro;
+}
+.libros {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    justify-content: space-between;
+}

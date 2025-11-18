@@ -1,0 +1,384 @@
+* {
+       box-sizing: border-box;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       color: black;
+}
+
+/*GENERAL*/
+
+
+h1 {
+       text-align: center;
+       font-size: 48px;
+}
+
+h2 {
+       font-size: 40px;
+}
+
+h3 {
+       font-size: 36px;
+}
+
+h4 {
+       font-size: 32px;
+}
+
+h5 {
+       font-size: 28px;
+}
+
+/*HEADER*/
+
+.container-fluid {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+}
+
+.navbar-nav {
+       display: flex;
+       list-style: none;
+       gap: 30px;
+       padding: 5px;
+}
+
+.nav-link:hover {
+       background-color: rgb(255, 255, 255);
+}
+
+.nav-item:hover {
+       scale: 1.2;
+}
+
+
+/*MAIN*/
+
+/*HOME*/
+.imagen-index {
+       display: flex;
+       flex-direction: row;
+       align-content: center;
+       justify-content: space-around;
+}
+
+
+/*CAPITULO*/
+
+.select-capitulo {
+       font-size: medium;
+}
+
+.select-capitulo {
+       background-color: white;
+}
+
+option {
+       color: black;
+}
+
+select:hover {
+       color: blue;
+}
+
+option:checked {
+       background-color: black;
+       color: white;
+}
+
+.listado-capitulos {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+}
+
+.imagen-capitulos {
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       border-radius: 8px;
+}
+
+
+/*COMPRAR*/
+
+main {
+       padding-left: 100px;
+       padding-right: 100px;
+}
+
+.libro {
+       height: 60vh;
+       width: 25vw;
+       margin: 10px;
+       align-items: center;
+       background-color: white;
+}
+
+.libros {
+       height: fit-content;
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: center;
+}
+
+.libros {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-template-rows: repeat(3, 1fr);
+       justify-items: stretch;
+       justify-content: space-evenly;
+}
+
+.card {
+       margin: 5px;
+       padding: 5px;
+}
+
+.card:hover {
+       scale: 0.9;
+}
+
+
+/*HISTORIA*/
+
+.historia-historia {
+       display: grid;
+       grid-template-areas:
+              "p img";
+       margin: 10px;
+}
+
+.texto-historia {
+       grid-area: p;
+}
+
+.imagen-historia {
+       grid-area: img;
+}
+
+.filosofia-historia {
+       display: grid;
+       grid-template-areas:
+              "img p";
+       margin: 10px;
+       padding: 15px;
+}
+
+.texto-filosofia-historia {
+       grid-area: p;
+}
+
+.imagen-filosofia-historia {
+       grid-area: img;
+}
+
+
+/*CONTACTO*/
+
+.mb-3 {
+       margin: 20px;
+}
+
+
+/*contacto grid*/
+.main-contacto {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: repeat(5, 1fr);
+}
+
+.h2-contacto {
+       grid-column: 1 / 3;
+       grid-row: 1 / 2;
+}
+
+.texto-contacto {
+       grid-column: 1 / 3;
+       grid-row: 2 / 3;
+}
+
+.h3-contacto {
+       grid-column: 1 / 3;
+       grid-row: 3 / 4;
+}
+
+form {
+       grid-column: 1 / 2;
+       grid-row: 4 / 6;
+       justify-items: stretch;
+       justify-content: space-evenly;
+       background-color: azure;
+}
+
+.lateral-contacto {
+       grid-column: 2 / 3;
+       grid-row: 4 / 6;
+       align-items: center;
+       align-content: stretch;
+       padding: 35px;
+       background-color: rgba(128, 128, 128, 0.226);
+       border: 2px solid black;
+       border-radius: 15px;
+}
+
+.cta-contacto {
+       grid-column: 1 / 3;
+       grid-row: 6 / 7;
+}
+
+
+/*FOOTER*/
+
+footer {
+       margin-top: 5%;
+       height: 35vh;
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+}
+
+.footer-logo {
+       text-align: left;
+       list-style: none;
+}
+
+.footer-indice {
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       justify-content: space-between;
+       text-align: center;
+       list-style: none;
+}
+
+.footer-social {
+       text-align: right;
+       list-style: none;
+       display: flex;
+       gap: 10px;
+       justify-content: space-between;
+}
+
+
+/*RESPONSIVE*/
+/*tablet*/
+
+@media (min-width: 431px) and (max-width: 800px) {}
+
+/*mobile*/
+@media (min-width: 320px) and (max-width: 430px) {
+
+       /*HEADER*/
+       header {
+              display: grid;
+              grid-template-areas:
+                     "logo logo"
+                     "nav nav";
+              justify-content: center;
+              align-content: center;
+       }
+
+       .logo-header {
+              grid-area: logo;
+       }
+
+       .nav-bar {
+              grid-area: nav;
+       }
+
+       header nav ul {
+              list-style: none;
+              gap: 10px;
+              font-size: small;
+              padding: 5px;
+       }
+
+       /*MAIN*/
+       main{
+              padding: 0px 50px;
+       }
+
+       /*INDEX*/
+
+       .imagen-index {
+              display: flex;
+              flex-direction: column;
+              align-content: center;
+              gap: 5px;
+              justify-content: space-around;
+       }
+
+       /*COMPRAR*/
+       .libros {
+              display: flex;
+              flex-flow: column wrap;
+       }
+
+       /*HISTORIA*/
+       .filosofia-historia{
+              display: flex;
+              flex-flow: column wrap;
+       }
+
+       .historia-historia{
+              display: flex;
+              flex-flow: column wrap;
+       }
+
+       /*CONTACTO*/
+
+       .main-contacto {
+              display: grid;
+              grid-template-areas:
+                     "h2-contacto h2-contacto"
+                     "texto-contacto texto-contacto"
+                     "h3-contacto h3-contacto"
+                     "form form"
+                     "lateral-contacto lateral-contacto"
+                     "cta-contacto ."
+              ;
+              grid-template-columns: auto auto;
+              grid-template-rows: auto auto auto auto auto auto;
+              row-gap: 10px;
+       }
+
+       form{
+              grid-area: form;
+       }
+
+       .lateral-contacto{
+              grid-area: lateral-contacto;
+       }
+
+       /*FOOTER*/
+       footer{
+              height: auto;
+              width: 90vw;
+       }
+
+       footer {
+              display: inline-grid;
+              grid-template-areas:
+                     "logo logo"
+                     "indice indice"
+                     "social social"
+              ;
+              justify-content: center;
+              align-items: center;
+       }
+
+       .footer-logo {
+              grid-area: logo;
+       }
+
+       .footer-indice {
+              grid-area: indice
+       }
+
+       .footer-social {
+              grid-area: social;
+       }
+}

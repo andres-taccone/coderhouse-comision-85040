@@ -1,0 +1,38 @@
+@use "variables" as v;
+
+.historia-historia {
+    display: grid;
+    grid-template-areas:
+        "p img";
+    margin: 10px;
+}
+
+.texto-historia {
+    grid-area: p;
+    margin: v.$margin
+}
+
+.imagen-historia {
+    grid-area: img;
+    width: v.$img-width;
+    height: v.$img-height;
+}
+
+.filosofia-historia {
+    display: grid;
+    grid-template-areas:
+        "img p";
+    margin: 10px;
+    padding: 15px;
+}
+
+.texto-filosofia-historia {
+    grid-area: p;
+    margin: v.$margin
+}
+
+.imagen-filosofia-historia {
+    grid-area: img;
+    width: v.$img-width;
+    height: v.$img-height;
+    }

@@ -1,0 +1,90 @@
+$fuente: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$fuente-color: black;
+$background: white;
+$fuente-hover: blue;
+$margin: 10px;
+$padding: 5px;
+$h1: 48px;
+$h2: 40px;
+$h3: 36px;
+$h4: 32px;
+$h5: 28px;
+$img-width: 400px;
+$img-height: 400px;
+
+
+* {
+    font-family: $fuente;
+    color: $fuente-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: $h1;
+    text-align: center;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+h5 {
+    font-size: $h5;
+}
+
+body {
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+
+@mixin flex($display, $direction, $align, $justify) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin space($height, $width){
+    height: $height;
+    width: $width;
+}
+
+@mixin text($align, $style) {
+    text-align: $align;
+    list-style: $style;
+
+}
+
+@mixin tablet {
+    @media(min-width: 431px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(min-width: 320px) and (max-width: 430px) {
+        @content;
+    }
+}
+
+
+%producto-libro {
+    @include flex(flex, column, center, center);
+    padding: 10px;
+    width: $img-width;
+    border: 2px solid white;
+    border-radius: 25px;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}

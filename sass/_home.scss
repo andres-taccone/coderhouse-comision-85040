@@ -1,0 +1,31 @@
+@use "variables" as v;
+
+.home{
+    @include v.flex(flex, column, center, space-around);
+    .imagen-index{
+        @include v.flex(flex, row, center, space-around)
+    }
+        .imagen-index-1{
+            width: 500px;
+            height: v.$img-height;
+        }
+        .imagen-index-2{
+            width: v.$img-width;
+            height: v.$img-height;
+        }
+}
+.porque-leer-tao{
+    @include v.flex(flex, row, center, space-around);
+    .img-porque-leer-tao{
+        width: v.$img-width;
+        height: v.$img-height;
+    }
+    .texto-porque-leer-tao{
+        padding: v.$padding;
+        margin: 10vh;
+    }
+}
+
+.space-1{
+    @include v.space(100px, max-content)
+}

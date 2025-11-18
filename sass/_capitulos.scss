@@ -1,0 +1,27 @@
+@use "variables" as v;
+
+.select-capitulo{
+    font-size: medium;
+    background-color: v.$fuente;
+    option {
+    color: v.$fuente-color;
+    }:checked{
+        background-color: v.$fuente-color;
+        color: white;
+    }
+}
+.bloque-listado-capitulos{
+    @include v.flex (flex, row, center, space-between);
+
+    .listado-capitulos{
+        @include v.flex (flex, column, flex-start, none);
+    }
+    .imagen-capitulos{
+        @include v.flex(flex, row, flex-end, none);
+        border-radius: 8px;
+        height: v.$img-height;
+        width: v.$img-width;
+    }
+}
+
+

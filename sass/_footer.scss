@@ -1,0 +1,27 @@
+@use "variables" as v;
+
+footer {
+    margin-top: 5%;
+    height: 35vh;
+    @include v.flex(flex, row, center, space-around);
+
+    .footer-logo {
+        width: 100px;
+        height: 100px;
+        @include v.text (left, none);
+    }
+
+    .footer-indice {
+        @include v.flex(flex, column, center, space-around);
+        gap: 10px;
+        @include v.text(center, none);
+    }
+
+    .footer-social {
+        @include v.text(right, none);
+        gap: 10px;
+        @include v.flex(flex, column, center, space-around);
+
+
+    }
+}

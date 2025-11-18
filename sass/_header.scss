@@ -1,0 +1,63 @@
+//código de sass y css del header y responsive//
+
+@use "variables" as v;
+
+header {
+    background-color: v.$background;
+    position: sticky;
+    top: 0;
+
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .logo-header{
+            width: 100px;
+            height: 100px;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            padding: v.$padding;
+
+            .navbar-item {
+                color: v.$fuente-color;
+            }:hover {
+                scale: 1.2;
+            }
+
+            .nav-link {
+                text-decoration: none;
+                color: v.$fuente-color;
+            }:hover {
+                    color: v.$fuente-hover;
+                }
+        }
+
+    }
+    @include v.mobile{
+        header{
+            display: grid;
+            grid-template-areas:
+                "logo logo"
+                "nav nav";
+            justify-content: center;
+            align-content: center;
+        }
+        .logo-header{
+            grid-area: logo;
+        }
+        .nav-bar{
+            grid-area: nav;
+        }
+        header nav ul{
+            list-style: none;
+            gap: 10px;
+            font-size: v.$h5;
+            padding: v.$padding;
+        }
+    }
+}
