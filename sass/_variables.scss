@@ -55,7 +55,7 @@ body {
     justify-content: $justify;
 }
 
-@mixin space($height, $width){
+@mixin space($height, $width) {
     height: $height;
     width: $width;
 }

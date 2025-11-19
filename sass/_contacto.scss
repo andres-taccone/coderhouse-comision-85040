@@ -5,6 +5,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
     column-gap: 30px;
+    row-gap: 30px;
 }
 
 .h2-contacto {
@@ -46,4 +47,29 @@ form {
 .cta-contacto {
     grid-column: 1 / 3;
     grid-row: 6 / 7;
+}
+
+@include v.mobile {
+    .main-contacto {
+        display: grid;
+        grid-template-areas:
+            "h2-contacto h2-contacto"
+            "texto-contacto texto-contacto"
+            "h3-contacto h3-contacto"
+            "form form"
+            "lateral-contacto lateral-contacto"
+            "cta-contacto ."
+        ;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        row-gap: 10px;
+    }
+
+    form {
+        grid-area: form;
+    }
+
+    .lateral-contacto {
+        grid-area: lateral-contacto;
+    }
 }

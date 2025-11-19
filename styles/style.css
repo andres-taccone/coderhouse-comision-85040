@@ -133,6 +133,31 @@ footer .footer-social {
   justify-content: space-around;
 }
 
+@media (min-width: 320px) and (max-width: 430px) {
+  footer {
+    height: auto;
+    width: 90vw;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-header {
+    width: 100px;
+    height: 100px;
+  }
+  .footer-indice {
+    list-style: none;
+    gap: 10px;
+    padding: 5px;
+  }
+  .footer-social {
+    list-style: none;
+    gap: 10px;
+    padding: 5px;
+  }
+}
 .select-capitulo {
   font-size: medium;
   background-color: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -167,6 +192,30 @@ footer .footer-social {
   width: 400px;
 }
 
+@media (min-width: 320px) and (max-width: 430px) {
+  main {
+    margin: 0;
+    padding: 0;
+  }
+  main .imagen-capitulos {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+  body {
+    margin-left: 5vh;
+    margin-right: 5vh;
+  }
+  body .bloque-listado-capitulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .libros {
   display: flex;
   flex-wrap: wrap;
@@ -179,6 +228,7 @@ footer .footer-social {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
   column-gap: 30px;
+  row-gap: 30px;
 }
 
 .h2-contacto {
@@ -222,10 +272,33 @@ form {
   grid-row: 6/7;
 }
 
+@media (min-width: 320px) and (max-width: 430px) {
+  .main-contacto {
+    display: grid;
+    grid-template-areas: "h2-contacto h2-contacto" "texto-contacto texto-contacto" "h3-contacto h3-contacto" "form form" "lateral-contacto lateral-contacto" "cta-contacto .";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    row-gap: 10px;
+  }
+  form {
+    grid-area: form;
+  }
+  .lateral-contacto {
+    grid-area: lateral-contacto;
+  }
+}
 .historia-historia {
   display: grid;
   grid-template-areas: "p img";
   margin: 10px;
+}
+@media (min-width: 320px) and (max-width: 430px) {
+  .historia-historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .texto-historia {
@@ -244,6 +317,14 @@ form {
   grid-template-areas: "img p";
   margin: 10px;
   padding: 15px;
+}
+@media (min-width: 320px) and (max-width: 430px) {
+  .filosofia-historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .texto-filosofia-historia {
@@ -273,9 +354,21 @@ form {
   width: 500px;
   height: 400px;
 }
+@media (min-width: 320px) and (max-width: 430px) {
+  .home .imagen-index-1 {
+    width: 100px;
+    height: 100px;
+  }
+}
 .home .imagen-index-2 {
   width: 400px;
   height: 400px;
+}
+@media (min-width: 320px) and (max-width: 430px) {
+  .home .imagen-index-2 {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .porque-leer-tao {
@@ -284,18 +377,46 @@ form {
   align-items: center;
   justify-content: space-around;
 }
+@media (min-width: 320px) and (max-width: 430px) {
+  .porque-leer-tao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .porque-leer-tao .img-porque-leer-tao {
   width: 400px;
   height: 400px;
+}
+@media (min-width: 320px) and (max-width: 430px) {
+  .porque-leer-tao .img-porque-leer-tao {
+    display: flex;
+    width: 100px;
+    height: 100px;
+  }
 }
 .porque-leer-tao .texto-porque-leer-tao {
   padding: 5px;
   margin: 10vh;
 }
+@media (min-width: 320px) and (max-width: 430px) {
+  .porque-leer-tao .texto-porque-leer-tao {
+    padding: 5px;
+    margin: 5px;
+  }
+}
 
 .space-1 {
   height: 100px;
   width: max-content;
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+  body {
+    margin-left: 5vh;
+    margin-right: 5vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

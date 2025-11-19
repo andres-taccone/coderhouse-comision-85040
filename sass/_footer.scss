@@ -21,7 +21,30 @@ footer {
         @include v.text(right, none);
         gap: 10px;
         @include v.flex(flex, column, center, space-around);
-
-
     }
 }
+    @include v.mobile {
+        footer {
+            height: auto;
+            width: 90vw;
+            font-size: small;
+            @include v.flex(flex, row, center, space-between)
+        }
+
+        .logo-header{
+            width: 100px;
+            height: 100px;
+        }
+
+        .footer-indice {
+            list-style: none;
+            gap: 10px;
+            padding: v.$padding;
+        }
+
+        .footer-social {
+            list-style: none;
+            gap: 10px;
+            padding: v.$padding;
+        }
+    }
