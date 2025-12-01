@@ -4,7 +4,9 @@
 
 header {
     background-color: v.$background;
+    border-bottom: solid 1px;
     position: sticky;
+    box-sizing: border-box;
     top: 0;
 
     .container-fluid {
@@ -12,6 +14,7 @@ header {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+
         .logo-header{
             width: 100px;
             height: 100px;
@@ -20,7 +23,8 @@ header {
         .navbar-nav {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 0px;
+            margin: 0px;
             padding: v.$padding;
 
             .navbar-item {
@@ -55,7 +59,7 @@ header {
         }
         header nav ul{
             list-style: none;
-            gap: 10px;
+            gap: 5px;
             font-size: v.$h5;
             padding: v.$padding;
         }

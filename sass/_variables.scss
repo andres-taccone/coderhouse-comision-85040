@@ -2,6 +2,7 @@ $fuente: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Uni
 $fuente-color: black;
 $background: white;
 $fuente-hover: blue;
+$fuente-estilo: justify;
 $margin: 10px;
 $padding: 5px;
 $h1: 48px;
@@ -15,6 +16,7 @@ $img-height: 400px;
 
 * {
     font-family: $fuente;
+    text-align: $fuente-estilo;
     color: $fuente-color;
     margin: 0;
     padding: 0;
@@ -42,6 +44,8 @@ h5 {
     font-size: $h5;
 }
 
+
+
 body {
     margin-left: 20vh;
     margin-right: 20vh;
@@ -63,7 +67,6 @@ body {
 @mixin text($align, $style) {
     text-align: $align;
     list-style: $style;
-
 }
 
 @mixin tablet {

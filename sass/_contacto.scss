@@ -3,12 +3,14 @@
 .main-contacto {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4,);
+    grid-auto-rows: auto;
     column-gap: 30px;
     row-gap: 30px;
 }
 
 .h2-contacto {
+    grid-template-rows: repeat(1fr);
     grid-column: 1 / 3;
     grid-row: 1 / 2;
 }
@@ -25,17 +27,21 @@
 
 form {
     grid-column: 1 / 2;
-    grid-row: 4 / 6;
+    grid-row: 4 / 5;
     justify-items: stretch;
     justify-content: space-evenly;
-    background-color: azure;
+    background-color: #C0C781;
     border: 2px solid v.$fuente-color;
     padding: v.$padding;
+    label{
+        font-style: italic;
+        font-weight: bold;
+    }
 }
 
 .lateral-contacto {
     grid-column: 2 / 3;
-    grid-row: 4 / 6;
+    grid-row: 4 / 5;
     align-items: center;
     align-content: stretch;
     padding: 35px;
@@ -45,11 +51,39 @@ form {
 }
 
 .cta-contacto {
-    grid-column: 1 / 3;
-    grid-row: 6 / 7;
+    text-align: center;
+    margin-top: 5vb;
+    font-size: 48px;
+    font-style: italic;
+    text-decoration: double;
 }
 
 @include v.mobile {
+    .main-contacto {
+        display: grid;
+        grid-template-areas:
+            "h2-contacto h2-contacto"
+            "texto-contacto texto-contacto"
+            "h3-contacto h3-contacto"
+            "form form"
+            "lateral-contacto lateral-contacto"
+            "cta-contacto ."
+        ;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        row-gap: 10px;
+    }
+
+    form {
+        grid-area: form;
+    }
+
+    .lateral-contacto {
+        grid-area: lateral-contacto;
+    }
+}
+
+@include v.tablet {
     .main-contacto {
         display: grid;
         grid-template-areas:

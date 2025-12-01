@@ -1,42 +1,72 @@
 @use "variables" as v;
 
-.select-capitulo {
-    font-size: medium;
-    background-color: v.$fuente;
-
-    option {
-        color: v.$fuente-color;
+main {
+    .capitulos-section-1 {
+        margin-top: 5vb;
     }
 
-    :checked {
-        background-color: v.$fuente-color;
-        color: white;
+    .indice {
+        margin-top: 5vb;
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            margin-top: 5vb;
+        }
+
+        .select-capitulo {
+            font-size: large;
+            background-color: v.$fuente;
+
+
+            option {
+                color: v.$fuente-color;
+            }
+
+            :checked {
+                background-color: v.$fuente-color;
+                color: white;
+            }
+        }
+
+        .bloque-listado-capitulos {
+            @include v.flex (flex, row, center, space-between);
+            flex-wrap: wrap;
+
+            .listado-capitulos {
+                @include v.flex (flex, column, flex-start, none);
+            }
+
+            .imagen-capitulos {
+                @include v.flex(flex, row, flex-end, none);
+                border-radius: 8px;
+
+                @include v.tablet {
+                height: 450px;
+                width: 450px;
+                margin: 2px;
+            }
+
+            }
+        }
     }
 }
 
-.bloque-listado-capitulos {
-    @include v.flex (flex, row, center, space-between);
 
-    .listado-capitulos {
-        @include v.flex (flex, column, flex-start, none);
-    }
 
-    .imagen-capitulos {
-        @include v.flex(flex, row, flex-end, none);
-        border-radius: 8px;
-        height: v.$img-height;
-        width: v.$img-width;
-    }
-}
+
 
 main {
     @include v.mobile {
         margin: 0;
         padding: 0;
 
+
         .imagen-capitulos {
-            height: 400px;
-            width: 400px;
+            height: auto;
+            width: auto;
         }
     }
 }
@@ -47,7 +77,7 @@ body {
         margin-right: 5vh;
 
         .bloque-listado-capitulos {
-            @include v.flex(flex, column, center, center)
+            @include v.flex(flex, row, center, center)
         }
 
     }

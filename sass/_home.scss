@@ -3,6 +3,10 @@
 .home {
     @include v.flex(flex, column, center, space-around);
 
+    .el-tao-vida-moderna {
+        margin-top: 5vb;
+    }
+
     .imagen-index {
         @include v.flex(flex, row, center, space-around)
     }
@@ -10,10 +14,11 @@
     .imagen-index-1 {
         width: 500px;
         height: v.$img-height;
+        margin: auto;
 
         @include v.mobile {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
         }
     }
 
@@ -22,46 +27,66 @@
         height: v.$img-height;
 
         @include v.mobile {
-            width: 100px;
-            height: 100px;
-        }
-    }
-}
-
-.porque-leer-tao {
-    @include v.flex(flex, row, center, space-around);
-    @include v.mobile{
-        @include v.flex(flex, column, center, center); 
-    }
-
-    .img-porque-leer-tao {
-        width: v.$img-width;
-        height: v.$img-height;
-
-        @include v.mobile {
-            display: flex;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
         }
     }
 
-    .texto-porque-leer-tao {
-        padding: v.$padding;
-        margin: 10vh;
-        @include v.mobile{
-            padding: 5px;
-            margin: 5px;
+    .que-es-el-tao {
+        margin-top: 5vb;
+    }
+
+    .porque-leer-tao{
+        margin-top: 5vb;
+
+        .bloque-porque-leer-tao {
+            @include v.flex(flex, row, center, space-around);
+
+            @include v.mobile {
+                @include v.flex(flex, column, center, center);
+            }
+
+            @include v.tablet {
+                @include v.flex(flex, column, center, center);
+            }
+
+            .img-porque-leer-tao {
+                width: v.$img-width;
+                height: v.$img-height;
+
+                @include v.mobile {
+                    display: flex;
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+            .texto-porque-leer-tao {
+                padding: v.$padding;
+                margin: 10vh;
+
+                @include v.mobile {
+                    padding: 5px;
+                    margin: 5px;
+                }
+
+                @include v.tablet {
+                    padding: auto;
+                    margin: auto;
+                }
             }
         }
     }
-
-.space-1 {
-    @include v.space(100px, max-content)
+        
 }
 
-body{
-    @include v.mobile{
-    margin-left: 5vh;
-    margin-right: 5vh;
+
+
+
+
+body {
+    @include v.mobile {
+        margin-left: 5vh;
+        margin-right: 5vh;
     }
 }

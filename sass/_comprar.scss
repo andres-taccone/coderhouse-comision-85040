@@ -1,12 +1,27 @@
 @use "variables" as v;
 
+main {
+    h1 {
+        margin-top: 5vb;
+    }
 
-.card{
-    @extend %producto-libro;
-}
-.libros {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 15px;
-    justify-content: space-between;
+    .texto-comprar-top {
+        margin-bottom: 5vb;
+    }
+
+    .texto-comprar-botton {
+        margin-top: 5vb;
+    }
+
+    .card {
+        @extend %producto-libro;
+
+    }
+
+    .libros {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        justify-content: space-between;
+    }
 }

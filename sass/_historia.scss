@@ -1,44 +1,68 @@
 @use "variables" as v;
 
-.historia-historia {
-    display: grid;
-    grid-template-areas:
-        "p img";
-    margin: 10px;
-    @include v.mobile{
-        @include v.flex(flex, column, center, center)
+main {
+    h2{
+        text-align: center;
+        margin-top: 5vb;
     }
-}
-
-.texto-historia {
-    grid-area: p;
-    margin: v.$margin
-}
-
-.imagen-historia {
-    grid-area: img;
-    width: v.$img-width;
-    height: v.$img-height;
-}
-
-.filosofia-historia {
-    display: grid;
-    grid-template-areas:
-        "img p";
-    margin: 10px;
-    padding: 15px;
-    @include v.mobile{
-        @include v.flex(flex, column, center, center)
+    h3 {
+        margin-top: 5vb;
     }
-}
 
-.texto-filosofia-historia {
-    grid-area: p;
-    margin: v.$margin
-}
+    .historia-historia {
+        display: grid;
+        grid-template-areas:
+            "p img";
+        margin: 10px;
 
-.imagen-filosofia-historia {
-    grid-area: img;
-    width: v.$img-width;
-    height: v.$img-height;
+        @include v.mobile {
+            @include v.flex(flex, column, center, center)
+        }
+        @include v.tablet {
+            @include v.flex(flex, column, center, center)
+            }
     }
+
+    .texto-historia {
+        grid-area: p;
+        margin: v.$margin
+    }
+
+    .imagen-historia {
+        grid-area: img;
+        width: v.$img-width;
+        height: v.$img-height;
+    }
+
+    .filosofia-historia {
+        display: grid;
+        grid-template-areas:
+            "img p";
+        margin: 10px;
+        padding: 15px;
+
+        @include v.mobile {
+            margin: 0px;
+            padding: 0px;
+            @include v.flex(flex, column, center, center)
+            
+        }
+        @include v.tablet {
+            margin: 0px;
+            padding: 0px;
+            @include v.flex(flex, column, center, center)
+        }
+    }
+
+    .texto-filosofia-historia {
+        grid-area: p;
+        margin: 10px;
+    }
+
+    .imagen-filosofia-historia {
+        grid-area: img;
+        width: v.$img-width;
+        height: v.$img-height;
+    }
+
+}

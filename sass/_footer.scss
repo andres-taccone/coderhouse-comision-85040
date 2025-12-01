@@ -2,12 +2,12 @@
 
 footer {
     margin-top: 5%;
-    height: 35vh;
+    height: auto;
     @include v.flex(flex, row, center, space-around);
 
     .footer-logo {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         @include v.text (left, none);
     }
 
@@ -28,7 +28,7 @@ footer {
             height: auto;
             width: 90vw;
             font-size: small;
-            @include v.flex(flex, row, center, space-between)
+            @include v.flex(flex, column, center, space-between)
         }
 
         .logo-header{
