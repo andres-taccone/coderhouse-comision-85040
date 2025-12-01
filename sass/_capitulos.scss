@@ -44,25 +44,20 @@ main {
                 border-radius: 8px;
 
                 @include v.tablet {
-                height: 450px;
-                width: 450px;
-                margin: 2px;
-            }
+                    height: 450px;
+                    width: 450px;
+                    margin: 2px;
+                }
 
             }
         }
     }
 }
 
-
-
-
-
 main {
     @include v.mobile {
         margin: 0;
         padding: 0;
-
 
         .imagen-capitulos {
             height: auto;

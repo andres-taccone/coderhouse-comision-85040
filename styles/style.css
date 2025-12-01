@@ -53,6 +53,26 @@ header {
   box-sizing: border-box;
   top: 0;
 }
+@media (min-width: 320px) and (max-width: 430px) {
+  header header {
+    display: grid;
+    grid-template-areas: "logo logo" "nav nav";
+    justify-content: center;
+    align-content: center;
+  }
+  header .logo-header {
+    grid-area: logo;
+  }
+  header .nav-bar {
+    grid-area: nav;
+  }
+  header header nav ul {
+    list-style: none;
+    gap: 5px;
+    font-size: 28px;
+    padding: 5px;
+  }
+}
 header .container-fluid {
   display: flex;
   flex-direction: column;
@@ -82,26 +102,6 @@ header .container-fluid .navbar-nav .nav-link {
 }
 header .container-fluid .navbar-nav :hover {
   color: blue;
-}
-@media (min-width: 320px) and (max-width: 430px) {
-  header header {
-    display: grid;
-    grid-template-areas: "logo logo" "nav nav";
-    justify-content: center;
-    align-content: center;
-  }
-  header .logo-header {
-    grid-area: logo;
-  }
-  header .nav-bar {
-    grid-area: nav;
-  }
-  header header nav ul {
-    list-style: none;
-    gap: 5px;
-    font-size: 28px;
-    padding: 5px;
-  }
 }
 
 footer {

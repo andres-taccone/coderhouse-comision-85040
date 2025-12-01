@@ -5,6 +5,8 @@ footer {
     height: auto;
     @include v.flex(flex, row, center, space-around);
 
+
+
     .footer-logo {
         width: 150px;
         height: 150px;
@@ -22,29 +24,32 @@ footer {
         gap: 10px;
         @include v.flex(flex, column, center, space-around);
     }
+
+
 }
-    @include v.mobile {
-        footer {
-            height: auto;
-            width: 90vw;
-            font-size: small;
-            @include v.flex(flex, column, center, space-between)
-        }
 
-        .logo-header{
-            width: 100px;
-            height: 100px;
-        }
-
-        .footer-indice {
-            list-style: none;
-            gap: 10px;
-            padding: v.$padding;
-        }
-
-        .footer-social {
-            list-style: none;
-            gap: 10px;
-            padding: v.$padding;
-        }
+@include v.mobile {
+    footer {
+        height: auto;
+        width: 90vw;
+        font-size: small;
+        @include v.flex(flex, column, center, space-between)
     }
+
+    .logo-header {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer-indice {
+        list-style: none;
+        gap: 10px;
+        padding: v.$padding;
+    }
+
+    .footer-social {
+        list-style: none;
+        gap: 10px;
+        padding: v.$padding;
+    }
+}

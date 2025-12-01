@@ -9,17 +9,43 @@ header {
     box-sizing: border-box;
     top: 0;
 
+    @include v.mobile {
+        header {
+            display: grid;
+            grid-template-areas:
+                "logo logo"
+                "nav nav";
+            justify-content: center;
+            align-content: center;
+        }
+
+        .logo-header {
+            grid-area: logo;
+        }
+
+        .nav-bar {
+            grid-area: nav;
+        }
+
+        header nav ul {
+            list-style: none;
+            gap: 5px;
+            font-size: v.$h5;
+            padding: v.$padding;
+        }
+    }
+
     .container-fluid {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
 
-        .logo-header{
+        .logo-header {
             width: 100px;
             height: 100px;
         }
-        
+
         .navbar-nav {
             display: flex;
             list-style: none;
@@ -29,39 +55,22 @@ header {
 
             .navbar-item {
                 color: v.$fuente-color;
-            }:hover {
+            }
+
+            :hover {
                 scale: 1.2;
             }
 
             .nav-link {
                 text-decoration: none;
                 color: v.$fuente-color;
-            }:hover {
-                    color: v.$fuente-hover;
-                }
+            }
+
+            :hover {
+                color: v.$fuente-hover;
+            }
         }
 
     }
-    @include v.mobile{
-        header{
-            display: grid;
-            grid-template-areas:
-                "logo logo"
-                "nav nav";
-            justify-content: center;
-            align-content: center;
-        }
-        .logo-header{
-            grid-area: logo;
-        }
-        .nav-bar{
-            grid-area: nav;
-        }
-        header nav ul{
-            list-style: none;
-            gap: 5px;
-            font-size: v.$h5;
-            padding: v.$padding;
-        }
-    }
+
 }
